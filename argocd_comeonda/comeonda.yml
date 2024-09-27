@@ -17,7 +17,7 @@ kind: Deployment
 metadata:
   name: comeonda-app  # Changed to use valid RFC 1123 subdomain
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: comeonda-app
