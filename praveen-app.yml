@@ -27,7 +27,7 @@ spec:
         app: praveen-app
     spec:
       containers:
-        - name: comeonda
+        - name: praveen-app
           image: praveen4901/praveen-app:v1
           ports:
             - containerPort: 3000
