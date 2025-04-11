@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: comeonda-app
+  name: praveen-app
 spec:
   type: NodePort
   ports:
@@ -9,26 +9,26 @@ spec:
       targetPort: 3000   # Map to container's port 3000
       nodePort: 31322    # Optional: manually specify NodePort
   selector:
-    app: comeonda-app
+    app: praveen-app
 
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: comeonda-app  # Changed to use valid RFC 1123 subdomain
+  name: praveen-app  # Changed to use valid RFC 1123 subdomain
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: comeonda-app
+      app: praveen-app
   template:
     metadata:
       labels:
-        app: comeonda-app
+        app: praveen-app
     spec:
       containers:
-        - name: comeonda
-          image: praveen4901/comeondav1:v1
+        - name: praveen
+          image: praveen4901/test:v1
           ports:
             - containerPort: 3000
 
